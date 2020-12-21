@@ -1,0 +1,16 @@
+.menu__movie{
+    background-color: rgba(34, 34, 34, 0.918);
+    margin-top:-16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:10px;
+    border-bottom-left-radius: 6px;
+}
+.link{
+    text-decoration:none !important;
+    color:white;
+}
+.active{
+    
+}

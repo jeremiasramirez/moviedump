@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
+import RouteApp from './routes/routes.app';
+
 
 function App() {
-  return <h1>App running!!</h1>
+  return <RouteApp /> 
 }
 
 export default App;
