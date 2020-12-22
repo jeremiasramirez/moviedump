@@ -1,8 +1,10 @@
 .menu__movie{
     background-color: rgba(34, 34, 34, 0.918);
     margin-top:-16px;
+    height: 100px;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: nowrap;
     align-items: center;
     padding-top:10px;
     border-bottom-left-radius: 6px;
@@ -11,6 +13,22 @@
     text-decoration:none !important;
     color:white;
 }
-.active{
-    
+.text__field{
+    color:white !important;
+    border-radius: 7px;
+    background-color: rgb(82, 76, 76);
+    height:40px;
+    width:300px;
+    border:none;
+    font-size:18px;
 }
+.active{
+    color: #777;
+    transform:scale(.9);
+    transition:.3s;
+}
+
+
+
+
+
