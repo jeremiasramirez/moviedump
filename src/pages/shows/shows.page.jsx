@@ -4,6 +4,8 @@ import ComponentPopularMovie from '../../components/card-popular-movie/card.popu
 import getRecomendationMovies from '../../services/service.recomendation-movie';
 import SkeletonPopularMoviesComponent from '../../components/skeleton-popular-movies/skeleton.popular-movies';
 import CardMovieComponent from '../../components/card-movie/card.movie';
+import MovieSkeleton from '../../components/movie-skeleton/movie.skeleton';
+
 
 import './shows.page.css';
 
@@ -16,25 +18,33 @@ const ShowsPage = ()=>{
     useEffect(()=>{
 
         getPopularMovies(setPopularMovie);
-        getRecomendationMovies(setRecommendMovie)
+        getRecomendationMovies(setRecommendMovie);
 
+        return () =>{
+            getPopularMovies(null);
+            getRecomendationMovies(null);
+        };
+         
     },[]);
 
 
 
     
     return <>
-        <h1 className="title__module">Populares</h1>
         {/* popular movies */}
-        <section className="container__popular__movie animate">{
+        <h1 className="animate title__module">Populares</h1>
+       
+        <section className="animate container__popular__movie">{
             !popularMovie.length  ? <SkeletonPopularMoviesComponent /> : <ComponentPopularMovie data={popularMovie}/>
         }</section>
         
+
+
         {/* recommendation movies */}
-        <h1 className="title__module">Recomendaciones</h1>
+        <h1 className="animate title__module">Recomendaciones</h1>
         <section className="container__card__movies">{
 
-            recommendMovie.length ? <CardMovieComponent data={recommendMovie}/> : null
+            recommendMovie.length ? <CardMovieComponent data={recommendMovie}/> : <MovieSkeleton />
 
         }</section>
         

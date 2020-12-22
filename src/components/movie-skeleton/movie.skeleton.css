@@ -1,0 +1,7 @@
+.skeleton__movie{
+    width: 165px;
+    height: 215px;
+    background-color: rgb(145, 138, 138);
+    margin: 5px 8px;
+    border-radius:6px;
+}

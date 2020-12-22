@@ -2,7 +2,7 @@
     width: 80px;
     height: 80px;
     border: none;
-    background-color: rgba(48, 38, 38, 0.795);
+    background-color: rgba(173, 170, 170, 0.795);
     border-radius: 50%;
     margin:6px;
     animation: animateSkeleton 2s infinite ease-in-out;
