@@ -1,0 +1,17 @@
+.container__popular__movie{
+    display:flex;
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.popular__movie{
+    cursor:pointer;
+    width: 70px;
+    margin: 5px 7px;
+    height: 70px;
+    border-radius: 50%;
+    border:1px solid red;
+}
