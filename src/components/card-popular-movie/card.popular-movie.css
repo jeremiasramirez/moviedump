@@ -9,9 +9,22 @@
 
 .popular__movie{
     cursor:pointer;
-    width: 70px;
+    width: 80px;
     margin: 5px 7px;
-    height: 70px;
+    height: 83px;
     border-radius: 50%;
-    border:1px solid red;
+    transition: .4s;
+    /* border:1px solid red; */
 }
+.popular__movie:hover img{
+    transition:.3s;
+    box-shadow:1px 1px 6px rgb(58, 57, 57);
+    
+}
+.popular__movie img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+

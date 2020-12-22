@@ -25,11 +25,11 @@ const ShowsPage = ()=>{
         
         {/* popular movies */}
         <section className="container__popular__movie">
-            <ComponentPopularMovie />
+            <ComponentPopularMovie data={popularMovie}/>
         </section>
 
         {/* recommendation movies */}
-        
+
 
      </>
 }
