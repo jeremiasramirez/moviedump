@@ -7,6 +7,7 @@ import CardMovieComponent from '../../components/card-movie/card.movie';
 import MovieSkeleton from '../../components/movie-skeleton/movie.skeleton';
 
 
+
 import './shows.page.css';
 
 const ShowsPage = ()=>{

@@ -13,9 +13,12 @@
     overflow: hidden;
     background-color: #666;
     cursor:pointer;
-    margin: 5px 8px;
+    margin: 10px 8px;
     border-radius:6px;
     /* border: 1px solid red; */
+}
+.card__movie:hover{
+    transform:scale(1.1);
 }
 .card__movie img{
     border-radius:inherit;
