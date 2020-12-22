@@ -1,0 +1,18 @@
+.popular__movie__skeleton{
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: rgba(48, 38, 38, 0.795);
+    border-radius: 50%;
+    margin:6px;
+    animation: animateSkeleton 2s infinite ease-in-out;
+    transition:1s;
+}
+@keyframes animateSkeleton{
+    from{
+        background-color: rgba(66, 58, 58, 0.795);
+    }
+    to{
+        background-color: rgba(22, 18, 18, 0.795);
+    }
+}

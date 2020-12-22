@@ -15,7 +15,7 @@ code {
 }
 
 .animate{
-  animation: animateElement .7s linear; 
+  animation: animateElement .8s linear; 
   transition: .5s;
 }
 @keyframes animateElement{

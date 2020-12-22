@@ -4,13 +4,13 @@ import './card.popular-movie.css';
 
 const ComponentPopularMovie = ({data,key})=>{
    
-    console.log(data)
-    return data.map((value)=>{
+    // console.log(data) 
+    return data.map((value,key)=>{
          
-          return <article className="popular__movie">
-              <img src={'https://image.tmdb.org/t/p/w300'+value.poster_path} alt={value.title}/>
-            
-          </article>
+        return key < 13 ? <article className="popular__movie">
+            <img src={'https://image.tmdb.org/t/p/w300'+value.poster_path} alt={value.title}/>
+        
+         </article> : null;
 
     })
 }
