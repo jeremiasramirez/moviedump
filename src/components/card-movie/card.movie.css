@@ -1,0 +1,23 @@
+.container__card__movies{
+    margin-top: 12px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.card__movie{
+    width: 165px;
+    height: 215px;
+    background-color: #666;
+    margin: 5px 8px;
+    border-radius:6px;
+    /* border: 1px solid red; */
+}
+.card__movie img{
+    border-radius:inherit;
+    width: 100%;
+    background-color: #888;
+    height: 100%;
+}
