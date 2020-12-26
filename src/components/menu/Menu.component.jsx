@@ -8,12 +8,14 @@ import './Menu.component.css';
 const MenuComponent = ()=>{
 
     return <nav className="menu__movie ">
-         <input type="search" className="text__field animate" placeholder="Buscar"/>
-        <ul>  
-            <Button> <NavLink activeClassName="active" className="link animate" to="./shows">shows</NavLink> </Button>
-            <Button> <NavLink className="link animate" to="./start">tv</NavLink> </Button>
+         <ul>  
+            <Button> <NavLink activeClassName="active" className="link animate" to="./shows">SHOW</NavLink> </Button>
+            <Button> <NavLink className="link animate" to="./start">TV SHOW</NavLink> </Button>
         </ul>
+         <input type="search" className="text__field animate" placeholder="Buscar"/>
+       
     </nav> 
+     
 
 
 }

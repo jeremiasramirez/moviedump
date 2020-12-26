@@ -8,7 +8,8 @@ const ComponentPopularMovie = ({data,key})=>{
     return data.map((value,key)=>{
          
         return key < 13 ? <article key={key} className="animate popular__movie">
-            <img src={'https://image.tmdb.org/t/p/w300'+value.poster_path} alt={value.title}/>
+         
+            <img className="image__poster" src={'https://image.tmdb.org/t/p/w300'+value.poster_path} alt={''}/>
         
          </article> : null;
 

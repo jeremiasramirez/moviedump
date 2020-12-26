@@ -4,9 +4,9 @@ import ComponentPopularMovie from '../../components/card-popular-movie/card.popu
 import getRecomendationMovies from '../../services/service.recomendation-movie';
 import SkeletonPopularMoviesComponent from '../../components/skeleton-popular-movies/skeleton.popular-movies';
 import CardMovieComponent from '../../components/card-movie/card.movie';
-import MovieSkeleton from '../../components/movie-skeleton/movie.skeleton';
-
-
+import MovieSkeleton from '../../components/movie-skeleton/movie.skeleton'; 
+import getUpcomingMovies from '../../services/service.upcoming-movie';
+import getAiringMovies from '../../services/service.airing-movie';
 
 import './shows.page.css';
 
@@ -14,16 +14,21 @@ const ShowsPage = ()=>{
     
     const [popularMovie, setPopularMovie] = useState([]);
     const [recommendMovie, setRecommendMovie] = useState([]);
-
+    const [upcomingMovie, setUpcomingMovie] = useState([]);
+    const [airingMovie, setAiringMovie] = useState([]);
 
     useEffect(()=>{
 
         getPopularMovies(setPopularMovie);
         getRecomendationMovies(setRecommendMovie);
+        getUpcomingMovies(setUpcomingMovie);
+        getAiringMovies(setAiringMovie)
 
         return () =>{
             getPopularMovies(null);
             getRecomendationMovies(null);
+            getUpcomingMovies(null);
+            getAiringMovies(null)
         };
          
     },[]);
@@ -44,12 +49,23 @@ const ShowsPage = ()=>{
         {/* recommendation movies */}
         <h1 className="animate title__module">Recomendaciones</h1>
         <section className="container__card__movies">{
-
             recommendMovie.length ? <CardMovieComponent data={recommendMovie}/> : <MovieSkeleton />
+        }</section>
 
+        {/* recommendation movies */}
+        <h1 className="animate title__module">Próximas</h1>
+        <section className="container__card__movies">{
+            upcomingMovie.length ? <CardMovieComponent data={upcomingMovie}/> : <MovieSkeleton />
         }</section>
         
+        {/* recommendation movies */}
+        <h1 className="animate title__module">En el aire</h1>
+        <section className="container__card__movies">{
+            airingMovie.length ? <CardMovieComponent data={airingMovie}/> : <MovieSkeleton />
+        }</section>
+              
 
+        
      </>
 }
 

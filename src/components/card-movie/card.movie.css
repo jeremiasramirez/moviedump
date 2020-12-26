@@ -8,14 +8,14 @@
 }
 
 .card__movie{
-    width: 200px;
-    height: 265px;
+    width: 150px;
+    height: 230px;
     overflow: hidden;
-    background-color: #666;
+    background-color: rgb(226, 219, 219);
     cursor:pointer;
-    margin: 10px 8px;
-    border-radius:6px;
-    /* border: 1px solid red; */
+    /* padding: 5px; */
+    margin: 20px 10px;
+    border-radius:6px; 
 }
 .card__movie:hover{
     transform:scale(1.1);
@@ -39,7 +39,7 @@
     border-top-right-radius: 10px;
     transition:1s;
     
-    background-color: rgb(31, 30, 30);
+    background-color: rgb(230, 222, 222);
 }
  
 

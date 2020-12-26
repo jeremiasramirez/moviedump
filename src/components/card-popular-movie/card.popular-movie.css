@@ -17,7 +17,8 @@
     border-radius: 50%;
     transition: .4s;
 }
-.popular__movie:hover img{
+.popular__movie:hover{
+    border-radius: 4px;
     transition:.3s;
     opacity:.7;
     
