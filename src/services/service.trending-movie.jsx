@@ -10,7 +10,7 @@ const getTrendingMovies = (setTrendingMovie)=>{
 
     ajax.get(urlTrendingMovies).pipe(
                 pluck('response','results'),
-                delay(1000))
+                delay(100))
             .subscribe((resp)=>{
         setTrendingMovie(resp);
     });

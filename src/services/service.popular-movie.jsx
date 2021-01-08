@@ -9,7 +9,7 @@ const getPopularMovies = (setPopularMovie)=>{
 
     ajax.get(urlPopularMovies).pipe(
                 pluck('response','results'),
-                delay(1000))
+                delay(100))
             .subscribe((resp)=>{
         setPopularMovie(resp);
     });

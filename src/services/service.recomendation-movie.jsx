@@ -9,7 +9,7 @@ const getRecomendationMovies = (setRecommendMovie)=>{
 
         ajax.get(urlRecommendMovies).pipe(
             pluck('response','results'),
-            delay(1000)
+            delay(100)
             ).subscribe((resp)=>{
             setRecommendMovie(resp);
         });

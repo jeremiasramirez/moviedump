@@ -9,7 +9,7 @@ const getUpcomingMovies = (setUpcomingMovies)=>{
 
         ajax.get(urlUpcoming).pipe(
             pluck('response','results'),
-            delay(1000)
+            delay(100)
             ).subscribe((resp)=>{
                 setUpcomingMovies(resp);
         });

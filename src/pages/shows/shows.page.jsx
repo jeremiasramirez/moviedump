@@ -43,7 +43,9 @@ const ShowsPage = ()=>{
 
     
     return <>
+        {/* Search */}
         <MenuComponent />
+        
         {/* popular movies */}
         <h1 className="animate title__module">Populares</h1>
        
