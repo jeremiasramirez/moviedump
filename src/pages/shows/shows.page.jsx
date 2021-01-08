@@ -10,6 +10,7 @@ import getAiringMovies from '../../services/service.airing-movie';
 import getTrendingMovies from '../../services/service.trending-movie';
 import MenuComponent from '../../components/menu/Menu.component';
 import './shows.page.css';
+import MenuSkeleton from '../../components/menu-skeleton/menu-skeleton.component';
 
 
 const ShowsPage = ()=>{
@@ -43,8 +44,11 @@ const ShowsPage = ()=>{
 
     
     return <>
-        {/* Search */}
-        <MenuComponent />
+        {
+            /* Search menu*/ 
+            !popularMovie.length ? <MenuSkeleton /> : <MenuComponent />
+        }
+        
         
         {/* popular movies */}
         <h1 className="animate title__module">Populares</h1>
