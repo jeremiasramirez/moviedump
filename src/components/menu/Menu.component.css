@@ -16,7 +16,7 @@
 }
 .link{
     text-decoration:none !important;
-    color:white;
+    color:rgb(221, 77, 77);
 }
 .text__field{
     color:white !important;
@@ -25,13 +25,18 @@
     height:60px !important;
     width:80%;
     border:none;
+    margin:0;
+    border-color:transparent;
     padding: 4px;
     font-size:18px;
 }
+ 
 .active{
-    color: #999;
-    /* transform:scale(1.1); */
+    color: rgb(235, 133, 133);
+    transform:scale(1.1);
     transition:.3s;
+    
+    
 }
 
 

@@ -5,14 +5,14 @@ import {
     Switch} from 'react-router-dom'
 import ShowsPage from '../pages/shows/shows.page';
 import StartPage from '../pages/start/start.page';
-import MenuComponent from '../components/menu/Menu.component';
+
 
 
 const RouteApp = ()=>{
 
     return <Router>
         <div>
-        <MenuComponent />
+        
 
         <Switch>
             <Route exact path='/shows' component={ShowsPage} />
