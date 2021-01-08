@@ -13,7 +13,6 @@ const ShowPage = ()=>{
         <section className="banner__movie animate">
         <NavLink to="/shows"><Button className="back"><ArrowBackIosIcon/></Button></NavLink>
             <article className="banner__elements">
-             
                 <h1 className="banner__title">Titulo</h1>
             </article>
 
