@@ -1,0 +1,45 @@
+.banner__skeleton{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(201, 191, 191);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner__skeleton p{
+    width: 200px;
+    border-radius: 7px;
+    height: 20px;
+    background-color: rgb(223, 207, 207);
+}
+
+.container__skeleton{
+    width: 100%;
+    height: 270px;
+    background-color: rgb(223, 207, 207);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: flex-end;
+}
+ 
+.container__poster{
+    position: relative;
+    background-color: rgb(201, 191, 191);
+    width: 250px;
+    border-radius: 4px;
+    top: 140px;
+    height: 310px; 
+    animation: animatePoster .5s  linear;
+}
+
+@keyframes animatePoster{
+    from {
+        transform: translateY(20px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
