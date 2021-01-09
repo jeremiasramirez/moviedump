@@ -9,7 +9,7 @@
 .banner__skeleton p{
     width: 200px;
     border-radius: 7px;
-    height: 20px;
+    height: 20px; 
     background-color: rgb(223, 207, 207);
 }
 
@@ -29,9 +29,9 @@
     position: relative;
     background-color: rgb(201, 191, 191);
     width: 250px;
-    border-radius: 4px;
+    border-radius: 6px;
     top: 140px;
-    height: 310px; 
+    height: 320px; 
     animation: animatePoster .5s  linear;
 }
 
@@ -43,3 +43,8 @@
         transform: translateY(0);
     }
 }
+
+
+
+
+

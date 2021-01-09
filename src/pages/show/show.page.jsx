@@ -12,7 +12,7 @@ const ShowPage = ()=>{
     return <>
         
         {
-            movie !== undefined ? <BannerShow /> : <SkeletonShow />
+            movie === undefined ? <BannerShow /> : <SkeletonShow />
         }
         
 
