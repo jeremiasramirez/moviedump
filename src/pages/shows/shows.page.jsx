@@ -43,7 +43,8 @@ const ShowsPage = ()=>{
 
 
     
-    return <>
+    return <> 
+
         {
             /* Search menu*/ 
             !popularMovie.length ? <MenuSkeleton /> : <MenuComponent />
