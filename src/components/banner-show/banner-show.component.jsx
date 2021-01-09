@@ -20,14 +20,20 @@ const BannerShow = ({data})=>{
          
 
             <article className="banner__backdrop">
-            <img  className="backdrop__img" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
+            <img  className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
                
-                <div className="banner__poster animate">
+                <div className="banner__poster animate aanimateToUp">
                     <img src={'https://image.tmdb.org/t/p/w300'+data.poster_path} alt={data.original_title}/>
                 </div>
             </article>
 
-        </section> 
+        </section>
+
+        
+
+            <article className="title__show animateToUp">
+                <h1>{data.original_title}</h1>
+            </article> 
     </>
 }
 
