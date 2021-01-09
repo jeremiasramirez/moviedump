@@ -4,7 +4,14 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
+.top__banner{
+    position: absolute;
+ 
+    width:100%;
+    background-color: black;
+    z-index: 200;
+    /* margin-top: 40px; */
+}
 
 .banner__backdrop{
     width:100%;
@@ -26,13 +33,14 @@
     position:absolute !important;
     top:4px !important;
     left: 0px !important; 
-
+    
     color:white !important;
 }
 
 
 .banner__elements *{
     display: flex;
+    position:absolute;
     justify-content: center;
     align-items: center;
     line-height: 65px;
@@ -48,12 +56,26 @@
     font-family: monospace;
 }
 
+.backdrop__img{
+    position: absolute;
+    top:-1px; 
+    filter:blur(3px);
+    height: 350px;
+    z-index: 0;
+    width:100%;
+}
+
 
 .banner__poster{
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 270px;
     position: relative;
-    bottom: -130px;
+    bottom: -210px;
     border-radius:4px;
     background-color: rgb(218, 200, 200);
+}
+.banner__poster img{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
 }

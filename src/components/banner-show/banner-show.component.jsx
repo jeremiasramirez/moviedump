@@ -6,22 +6,25 @@ import './banner-show.component.css';
 
 
 
-const BannerShow = ()=>{
+const BannerShow = ({data})=>{
+  
     return <>
+       <article className="top__banner">
+                <NavLink to="/shows">
+                    <Button className="back animate">
+                        <ArrowBackIosIcon/>
+                    </Button>
+                </NavLink>
+           </article>
         <section className="banner__movie">
-        
-            <NavLink to="/shows">
-                <Button className="back animate">
-                    <ArrowBackIosIcon/>
-                </Button>
-            </NavLink>
-            
-            <article className="banner__elements">
-                <h1 className="banner__title animate">Doctor Strange</h1>
-            </article>
+         
 
             <article className="banner__backdrop">
-                <div className="banner__poster animate"> </div>
+            <img  className="backdrop__img" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
+               
+                <div className="banner__poster animate">
+                    <img src={'https://image.tmdb.org/t/p/w300'+data.poster_path} alt={data.original_title}/>
+                </div>
             </article>
 
         </section> 
