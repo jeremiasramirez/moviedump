@@ -21,7 +21,7 @@ const BannerShow = ()=>{
             </article>
 
             <article className="banner__backdrop">
-                <div className="banner__poster"> </div>
+                <div className="banner__poster animate"> </div>
             </article>
 
         </section> 
