@@ -37,6 +37,8 @@
     width:60%;
     border:none;
     margin:0;
+    font-weight: 550;
+    text-align: center;
     border-color:transparent;
     padding: 4px;
     font-size:18px;
@@ -51,8 +53,29 @@
     
     
 }
-
-
-
+.responsiveCards{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.terminology{
+    text-align:center;
+    font-weight: 550;
+    font-size:18px;
+    margin: 20px;
+    width: auto;
+    display: inline-block;
+    color:white;
+    padding: 0px 10px;
+    border-radius: 4px;
+    line-height: 30px;
+    background-color: #333;
+}
+.terminology *{
+    position:relative;
+    top:2px;
+    right: -2px;
+}
 
 
