@@ -72,9 +72,11 @@
     line-height: 30px;
     background-color: #333;
 }
-.terminology *{
+.terminology span{
     position:relative;
-    top:2px;
+    top:5.5px;
+    color:rgb(255, 125, 125);
+    font-size:12px;
     right: -2px;
 }
 

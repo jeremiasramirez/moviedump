@@ -5,7 +5,7 @@ import {pluck,delay} from 'rxjs/operators';
 const getAiringMovies = (setAiringMovies)=>{
     
   if(setAiringMovies!=null){
-    const urlAiring = 'https://api.themoviedb.org/3/movie/now_playing?api_key=125250e6a9e5ca9991ac6cd1b964a257&language=es-ES&page=1'; 
+    const urlAiring = 'https://api.themoviedb.org/3/movie/now_playing?api_key=125250e6a9e5ca9991ac6cd1b964a257&language=es-ES&page=2'; 
 
     ajax.get(urlAiring).pipe(
                 pluck('response','results'),

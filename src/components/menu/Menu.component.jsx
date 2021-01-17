@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
 import './Menu.component.css';
 import MovieSkeleton from '../movie-skeleton/movie.skeleton'; 
-import Search from '@material-ui/icons/Search';
+import Close from '@material-ui/icons/Close';
 import getMoviesBySearch from '../../services/service.search-movie';
 import CardMovieComponent from '../card-movie/card.movie';
 import SpinnerComponent from '../spinner/spinner.component';
 
 const MenuComponent = ()=>{
 
-    const [valueSearch,setValueSearch] = useState([]);
+    const [valueSearch,setValueSearch] = useState(['']);
     const [dataSearched, setdataSearched] = useState([]);
     let [isWriting, setWritingValue] = useState([false])
 
@@ -18,7 +18,7 @@ const MenuComponent = ()=>{
 
         setTimeout(()=>{
             setWritingValue(()=>false);
-        },1500)
+        },3000)
         
         getMoviesBySearch(setdataSearched,data);  
     }
@@ -30,20 +30,21 @@ const MenuComponent = ()=>{
                 <img  src="https://www.flaticon.com/svg/static/icons/svg/3995/3995436.svg" alt="icon" />
             </div>
 
-            <input onChange={(e)=>searchByMenu(e.target.value)} type="search" className="text__field animate" placeholder="Buscar"/>
+            <input   value={valueSearch} onChange={(e)=>searchByMenu(e.target.value)} type="search" className="text__field animate" placeholder="Buscar"/>
        
         </nav> 
         
         <section>
-            <h1 className="terminology animate">{valueSearch} {valueSearch.length ? <span> <Search /> </span> : null} </h1>
+            { 
+                (valueSearch.length > 1) ? <h1 className="terminology animate">{valueSearch} <span onClick={ ()=> { setValueSearch(()=>''); setdataSearched(()=>[]) } }> <Close /> </span>  </h1> : null
+            }
             {
-                (isWriting===true) ?  <SpinnerComponent /> : null
-             }
+                (isWriting===true) ? <SpinnerComponent /> : null
+            }
             <article className="responsiveCards animate">
              {
-                (isWriting===true) ?  <MovieSkeleton /> : null
+                (isWriting===true) ? <MovieSkeleton /> : null
              }
-           
              {
                 (dataSearched.length > 1 ) ? <CardMovieComponent data={dataSearched}/>: null
              }

@@ -8,7 +8,7 @@ const getMoviesBySearch = (setMovieBySearch,finds)=>{
    
     ajax.get(urlMovieBySearch).pipe(
                 pluck('response','results'),
-                delay(1000)).subscribe(
+                delay(100)).subscribe(
             (resp)=>{
                 
               setMovieBySearch(resp);
