@@ -4,6 +4,7 @@ import MovieSkeleton from '../movie-skeleton/movie.skeleton';
 import Search from '@material-ui/icons/Search';
 import getMoviesBySearch from '../../services/service.search-movie';
 import CardMovieComponent from '../card-movie/card.movie';
+import SpinnerComponent from '../spinner/spinner.component';
 
 const MenuComponent = ()=>{
 
@@ -35,11 +36,14 @@ const MenuComponent = ()=>{
         
         <section>
             <h1 className="terminology animate">{valueSearch} {valueSearch.length ? <span> <Search /> </span> : null} </h1>
-
+            {
+                (isWriting===true) ?  <SpinnerComponent /> : null
+             }
             <article className="responsiveCards animate">
              {
                 (isWriting===true) ?  <MovieSkeleton /> : null
              }
+           
              {
                 (dataSearched.length > 1 ) ? <CardMovieComponent data={dataSearched}/>: null
              }
