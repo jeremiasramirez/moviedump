@@ -14,24 +14,30 @@ const Buttoners = ()=>{
     
 }
 
+const imageShow = (data)=>{
+    return <article className="banner__backdrop">
+        <img className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
+               
+        <div className="banner__poster animate aanimateToUp">
+            <img src={'https://image.tmdb.org/t/p/w300'+data.poster_path} alt={data.original_title}/>
+        </div>
+    </article>
+}
+
 const BannerShow = ({data})=>{
   
     return <section>
        <article className="top__banner">
-            {
-                Buttoners()
-            }
+        {
+            Buttoners()
+        }
         </article>
+
         <section className="banner__movie">
 
-            <article className="banner__backdrop">
-            <img  className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
-               
-                <div className="banner__poster animate aanimateToUp">
-                    <img src={'https://image.tmdb.org/t/p/w300'+data.poster_path} alt={data.original_title}/>
-                </div>
-            </article>
-
+        {
+            imageShow(data)
+        }
         </section>
 
             <article className="title__show animateToUp">
