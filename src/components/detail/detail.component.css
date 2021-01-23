@@ -1,0 +1,26 @@
+.detail__container{
+    position: absolute;
+    top:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 200;
+    margin: 30px 0;
+}
+
+.detail{
+    width: 315px;
+    height: 200px;
+    border:1px solid blue;
+    margin: 10px;
+    padding: 0 8px;
+}
+
+.detail__title {
+
+    text-align: center;
+    font-size:22px;
+    font-family: monospace;
+
+}

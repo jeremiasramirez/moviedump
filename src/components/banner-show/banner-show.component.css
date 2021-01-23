@@ -32,9 +32,11 @@
     margin: 5px 4px !important;
     position:absolute !important;
     top:4px !important;
+    width: 20px !important;
     left: 0px !important; 
-    
-    color:white !important;
+    /* border-radius:50% !important; */
+    background-color: rgba(41, 40, 40, 0.664) !important;
+    color:rgb(255, 255, 255) !important;
 }
 
 

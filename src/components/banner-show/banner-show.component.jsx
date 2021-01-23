@@ -3,6 +3,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Button from '@material-ui/core/Button';
 import {NavLink} from 'react-router-dom';
 import './banner-show.component.css';
+import DetailComponent from '../detail/detail.component';
 
 
 const Buttoners = ()=>{
@@ -15,6 +16,7 @@ const Buttoners = ()=>{
 }
 
 const imageShow = (data)=>{
+    console.log(data);
     return <article className="banner__backdrop">
         <img className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
                
@@ -26,7 +28,7 @@ const imageShow = (data)=>{
 
 const BannerShow = ({data})=>{
   
-    return <section>
+    return <>
        <article className="top__banner">
         {
             Buttoners()
@@ -34,7 +36,6 @@ const BannerShow = ({data})=>{
         </article>
 
         <section className="banner__movie">
-
         {
             imageShow(data)
         }
@@ -43,7 +44,10 @@ const BannerShow = ({data})=>{
             <article className="title__show animateToUp">
                 <h1>{data.original_title}</h1>
             </article> 
-    </section>
+
+
+            <DetailComponent />
+    </>
 }
 
 export default BannerShow;
