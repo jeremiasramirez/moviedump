@@ -4,7 +4,7 @@ import SpinnerComponent from '../spinner/spinner.component';
 import './skeleton-show.component.css';
 
 const SkeletonShow = ()=>{
-    return <>
+    return <div className='openPage'>
         <section className='container__skeleton animate'>
         
         <article className="banner__skeleton">
@@ -17,6 +17,6 @@ const SkeletonShow = ()=>{
      <SpinnerComponent />
     </section>
     
-    </>
+    </div>
 }
 export default SkeletonShow;

@@ -5,19 +5,24 @@ import {NavLink} from 'react-router-dom';
 import './banner-show.component.css';
 
 
+const Buttoners = ()=>{
+    return <NavLink to="/shows">
+            <Button className="back animate">
+                <ArrowBackIosIcon/>
+            </Button>
+        </NavLink>
+    
+}
 
 const BannerShow = ({data})=>{
   
-    return <>
+    return <section>
        <article className="top__banner">
-                <NavLink to="/shows">
-                    <Button className="back animate">
-                        <ArrowBackIosIcon/>
-                    </Button>
-                </NavLink>
-           </article>
+            {
+                Buttoners()
+            }
+        </article>
         <section className="banner__movie">
-         
 
             <article className="banner__backdrop">
             <img  className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
@@ -29,12 +34,10 @@ const BannerShow = ({data})=>{
 
         </section>
 
-        
-
             <article className="title__show animateToUp">
                 <h1>{data.original_title}</h1>
             </article> 
-    </>
+    </section>
 }
 
 export default BannerShow;

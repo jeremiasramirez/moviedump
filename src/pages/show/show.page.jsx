@@ -23,14 +23,14 @@ const ShowPage = ()=>{
     },[]);
 
 
-    return <>
+    return <div className='openPage'>
         
         {
             movie == false  ? <SkeletonShow /> : <BannerShow data={movie} /> 
         }
         
 
-    </>
+    </div>
 }
 
 
