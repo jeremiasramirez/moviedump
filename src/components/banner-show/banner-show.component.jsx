@@ -46,7 +46,7 @@ const BannerShow = ({data})=>{
             </article> 
 
 
-            <DetailComponent />
+            <DetailComponent data={data}/>
     </>
 }
 

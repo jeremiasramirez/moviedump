@@ -55,3 +55,20 @@ code {
       transform:translateX(0%);
   }
 }
+
+
+
+.animateDown{
+  animation: animateDownElement 1s linear; 
+  transition: 1s;
+}
+@keyframes animateDownElement{
+  from{
+    opacity: 0;
+    transform:translateY(5px)
+  }
+  to{
+    opacity: 1;
+    transform:translateY(0)
+  }
+}

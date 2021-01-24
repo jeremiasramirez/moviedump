@@ -1,21 +1,35 @@
 import React from 'react';
 import './detail.component.css';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
-
-
-const DetailComponent = ({ title, description })=>{
-    
+const DetailComponent = (data)=>{
+    console.log(data)
+     
     return <section className="detail__container">
 
-        <article className='detail'>
-            <h1 className="detail__title">Detail</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nam, sint exercitationem harum placeat tempore quam rem magnam odio dolorum nisi, voluptatibus culpa perspiciatis ipsam nulla! Nam reiciendis at commodi.</p>
+
+        <article className='detailVotes'>
+           <div className="vote vote__gradient__votes">
+            <ThumbUpIcon />   {data.data.vote_count}
+           </div>
+
+           <div className="vote vote__gradient__popularity">
+            <VisibilityIcon />   {data.data.popularity}
+           </div>
         </article>
 
-        <article className='detail'>
-            <h1 className="detail__title">Detail</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nam, sint exercitationem harum placeat tempore quam rem magnam odio dolorum nisi, voluptatibus culpa perspiciatis ipsam nulla! Nam reiciendis at commodi.</p>
+        
+
+        <article className='animateDown detail'>
+            <h1 className="detail__title">{data.data.original_title }  </h1>
+            <p> { data.data.overview }</p>
         </article>
+
+        
+
+
+        
 
     </section>
 
