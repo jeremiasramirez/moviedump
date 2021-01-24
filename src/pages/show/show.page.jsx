@@ -24,9 +24,9 @@ const ShowPage = ()=>{
 
 
     return <div className='openPage'>
-        
+        {/* BannerShow data={movie} */}
         {
-            movie == false  ? <SkeletonShow /> : <BannerShow data={movie} /> 
+            movie == false  ? <SkeletonShow /> : <SkeletonShow /> 
         }
         
 

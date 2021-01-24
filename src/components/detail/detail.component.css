@@ -45,17 +45,19 @@
 }
 .vote{
     text-align: center !important;
-    width: 80px;
+    width: 100px;
     display: flex;
     color:white;
     margin: 10px;
+    font-size:14px;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     font-family: arial;
     border-radius: 50%;
-    height: 80px;
-    animation:buble 1s   linear;
+    height: 100px;
+    animation:buble 1s linear;
+    transition:1s;
 }
 @keyframes buble{
     10%{
