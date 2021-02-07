@@ -1,8 +1,9 @@
 import React from 'react';
+import BannerStartApp from '../../components/banner-start/banner.start';
 
 const StartPage = ()=>{
   
-    return <h1>Start page </h1>
+    return <BannerStartApp />
 }
 
 export default StartPage

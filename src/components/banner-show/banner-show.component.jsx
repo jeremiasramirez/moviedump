@@ -16,7 +16,7 @@ const Buttoners = ()=>{
 }
 
 const imageShow = (data)=>{
-    console.log(data);
+
     return <article className="banner__backdrop">
         <img className="backdrop__img animate" src={'https://image.tmdb.org/t/p/w300'+data.backdrop_path} alt={data.original_title}/>
                
