@@ -6,7 +6,6 @@ import EventIcon from '@material-ui/icons/Event';
 
 
 const DetailComponent = (data)=>{
-    console.log(data)
      
     return <section className="detail__container">
 
